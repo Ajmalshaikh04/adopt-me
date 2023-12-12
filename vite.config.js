@@ -6,6 +6,6 @@ export default defineConfig({
   root: "src",
   // Output directory for the production build
   build: {
-    outDir: "dist",
+    outDir: "src/dist",
   },
 });
