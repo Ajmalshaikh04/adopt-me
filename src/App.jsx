@@ -4,7 +4,7 @@ import SearchParams from "./searchParams";
 import Details from "./Details";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useState } from "react";
-import AdoptedPetContext from "./Context/AdoptPetsContext";
+import AdoptPetContext from "./Context/AdoptPetsContext";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -21,7 +21,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
-        <AdoptedPetContext.Provider value={adoptedPet}>
+        <AdoptPetContext.Provider value={adoptedPet}>
           <header>
             <Link to={"/"}>Adopt Me!</Link>
           </header>
@@ -29,7 +29,7 @@ const App = () => {
             <Route path="/" element={<SearchParams />} />
             <Route path="/details/:id" element={<Details />} />
           </Routes>
-        </AdoptedPetContext.Provider>
+        </AdoptPetContext.Provider>
       </QueryClientProvider>
     </BrowserRouter>
   );
