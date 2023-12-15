@@ -5,12 +5,12 @@ import Carousel from "./Carousel";
 import ErrorBoundary from "./ErrorBoundary";
 import { useContext, useState } from "react";
 import Modal from "./Modal";
-import AdoptedPetContext from "./Context/AdoptPetsContext";
+import AdoptedPetsContext from "./Context/AdoptPetsContext";
 
 const Details = () => {
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
-  const [_, setAdoptedPet] = useContext(AdoptedPetContext);
+  const [_, setAdoptedPet] = useContext(AdoptedPetsContext);
   const { id } = useParams();
   const results = useQuery(["details", id], fetchPets); //([cache data if there] , otherwise fetch pets)
 
