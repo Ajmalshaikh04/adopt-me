@@ -244,11 +244,26 @@ header {
   text-align: center;
   border-radius: 30px;
   background: #faeff0;
+  animation: modal 0.4s;
 }
 
 #modal .buttons button {
   display: inline-block;
   margin-right: 15px;
+}
+@keyframes modal {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @media only screen and (max-width: 1129px) {
